@@ -1,0 +1,109 @@
+/* задаем шрифт на всю страницу из google fonts */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  /* цвет текста */
+  color: #0a143a;
+}
+
+.header {
+  /* ограничение мксимальной ширины */
+  max-width: 1146px;
+  /* выравнивание по середине */
+  margin: auto;
+  /* отступ сверху внутри */
+  padding-top: 30px;
+}
+
+.navbar {
+  /* гибкое поведение для элемента */
+  display: flex;
+  /* выравнивание элементов по вертикали по центру --- а не -_-*/
+  align-items: center;
+  /* расположение элменетов относительно друг друга по краям */
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* меню навигации в шапке */
+.navbar-menu {
+  /* автоматический отступ справа до упора */
+  margin-right: auto;
+}
+
+.menu {
+  /* отключаем точки в списке */
+  list-style-type: none;
+  /* обнуляем отступы */
+  margin: 0;
+  /* внутренний отступ слева от логотипа */
+  padding-left: 22px;
+  /* внутренний отступ справа */
+  padding-right: 22px;
+  /* гибкое поведение для элемента (расположить по горизонтали) */
+  display: flex;
+}
+
+/* свойство применяется ко всем кроме последнего */
+.menu-item:not(:last-child) {
+  margin-right: 14px;
+}
+
+.menu-link {
+  text-decoration: none;
+  /* наследуется от body */
+  color: inherit;
+}
+
+.button {
+  text-decoration: none;
+  /* свойство для того, чтобы могли нормально воспринимать отступы */
+  display: inline-block;
+  /* при наведении меняется курсор */
+  cursor: pointer;
+  /* либо padding: 10px 15px; */
+  padding: 10px 15px 10px 15px;
+}
+
+.button-link {
+  color: inherit;
+}
+
+.button-primary {
+  border-radius: 5px;
+  background-color: #256eeb;
+  color: white;
+}
+
+.search-panel {
+  height: 50px;
+  background: #256eeb;
+  border-radius: 5px;
+  display: flex;
+  padding: 3px;
+}
+
+.search-input {
+  /* растяжение элемента */
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
+.search-button {
+  background: inherit;
+  border: none;
+  color: white;
+  padding-left: 20px;
+  padding-right: 17px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-button-text {
+  margin-left: 5px;
+}
