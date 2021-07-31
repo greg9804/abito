@@ -6,13 +6,19 @@ body {
   color: #0a143a;
 }
 
-.header {
+/* рефакторинг, не множить одинаковые стили */
+.container {
   /* ограничение мксимальной ширины */
   max-width: 1146px;
   /* выравнивание по середине */
   margin: auto;
   /* отступ сверху внутри */
+}
+
+.header {
   padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .navbar {
@@ -103,7 +109,128 @@ body {
   display: flex;
   align-items: center;
 }
-
 .search-button-text {
   margin-left: 5px;
 }
+.page-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #0a143a;
+  margin: 0;
+  padding-bottom: 25px;
+}
+.page-content {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  /* grid-column-gap - воздух между колонками */
+  grid-column-gap: 30px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  margin-bottom: 20px;
+  width: 264px;
+}
+.card:not(:nth-child(3n)) {
+  margin-right: 20px;
+}
+.card-image {
+  border-radius: 10px;
+  height: 178px;
+  width: 264px;
+  /* заполнить и сохранить пропорции в блоке */
+  object-fit: cover;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-title {
+  font-size: 16px;
+  line-height: 19px;
+  color: #256eeb;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  width: 224px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.like {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.card-price {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0a143a;
+  margin-bottom: 10px;
+}
+.card-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #c4c4c4;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+.card-link {
+  text-decoration: none;
+}
+.sidebar .page-title {
+  font-size: 18px;
+  line-height: 21px;
+  color: #0a143a;
+  padding-bottom: 23px;
+}
+.sevice {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.sevice:nth-child(4) {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 37px;
+  margin-bottom: 18px;
+}
+.service-image {
+  margin-bottom: 7px;
+  margin-top: 0;
+}
+.service-title {
+  font-size: 14px;
+  line-height: 16px;
+  color: #0a143a;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+.service-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #0a143a;
+  max-width: 217px;
+}
+.footer-text {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  color: #c4c4c4;
+  margin-bottom: 5px;
+}
+.footer-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+}
+.footer-link {
+  color: inherit;
+  margin-bottom: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
